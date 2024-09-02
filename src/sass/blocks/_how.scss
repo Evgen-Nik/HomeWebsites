@@ -1,0 +1,16 @@
+.how {
+    &__wrapper {
+        margin-top: 100px;
+        display: flex;
+        gap: 32px;
+    }
+    &__item {
+        width: 50%;
+        background: var(--yellow_light);
+        padding: 48px;
+        border-radius: 20px;
+    }
+    &__title {
+        margin-bottom: 32px;
+    }
+}

@@ -1,0 +1,16 @@
+.footer {
+    background: var(--grey_2);
+    &__wrapper {
+        padding: 41px 0 87px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 113px;
+        height: 113px;
+    }
+    &__menu {
+        gap: 63.5px;
+    }
+}

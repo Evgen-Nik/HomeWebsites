@@ -1,0 +1,78 @@
+@import 'libs/bootstrap-reboot.min';
+
+@import 'fonts/fonts';
+
+@import 'base/variables';
+
+* {
+    font-family: 'SF Pro Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    line-height: unset;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+@import 'common/title';
+@import 'common/text';
+@import 'common/button';
+@import 'common/slider';
+@import 'common/list';
+
+
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/banner';
+@import 'blocks/evacuators';
+@import 'blocks/card';
+@import 'blocks/call';
+@import 'blocks/know';
+@import 'blocks/inside';
+@import 'blocks/advantage';
+@import 'blocks/how';
+@import 'blocks/weight';
+@import 'blocks/info';
+@import 'blocks/price';
+@import 'blocks/footer';
+
+@import 'blocks/create';
+
+@import 'blocks/media';

@@ -1,0 +1,59 @@
+.card {
+    padding: 40px 48px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px var(--grey_light2);
+    &__wrapper {
+        margin: 28px 0;
+        display: grid;
+        grid-template-columns: 414px 498px 336px;
+        gap: 28px;
+    }
+    &__option {
+        background: var(--grey_light1);
+        border-radius: 10px;
+        padding: 13px 20px;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &__name, &__price {
+        line-height: unset;
+    }
+    &__phone {
+        line-height: 21px;
+        &:first-child {
+            margin-bottom: 12px;
+        }
+    }
+    &__location {
+        display: block;
+        background: var(--yellow_light);
+        border-radius: 10px;
+        padding: 12px 20px;
+        margin-top: 21px;
+    }
+    &__point {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 8px;
+    }
+    &__order {
+        margin-top: 21px;
+        padding: 11px 36px;
+        border-radius: 35px;
+        font-weight: 400;
+        font-size: 12px;
+        span {
+            font-weight: 500;
+        }
+        p {
+            font-size: 14px;
+            text-decoration: underline;
+        }
+    }
+}

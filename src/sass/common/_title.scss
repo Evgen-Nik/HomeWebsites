@@ -1,0 +1,27 @@
+.title  {
+    font-weight: 700;
+    color: var(--grey_dark);
+    &_h1 {
+        font-size: 50px;
+    }
+    &_h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    &_h3 {
+        font-size: 32px;
+    }
+    &_h4 {
+        font-size: 26px;
+    }
+    &_h5 {
+        font-size: 20px;
+    }
+    &_white {
+        color: var(--white);
+    }
+    &_blue {
+        color: var(--blue_light1);
+        text-decoration: underline;
+    }
+}

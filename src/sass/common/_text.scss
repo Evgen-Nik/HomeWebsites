@@ -1,0 +1,38 @@
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--black);
+    &_medium {
+        font-weight: 500;
+    }
+    &_bold {
+        font-weight: 700;
+    }
+    &_grey {
+        color: var(--grey_1)
+    }
+    &_grey3 {
+        color: var(--grey_3)
+    }
+    &_blue {
+        color: var(--blue_main);
+    }
+    &_white {
+        color: var(--white);
+    }
+    &_fz16 {
+        font-size: 16px;
+    }
+    &_fz18 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    &_fz22 {
+        font-size: 22px;
+    }
+    &_fz26 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}

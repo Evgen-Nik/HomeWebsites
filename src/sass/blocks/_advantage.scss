@@ -1,0 +1,16 @@
+.advantage {
+    margin-top: 100px;
+    &__text {
+        margin-top: 48px;
+        max-width: 804px;
+    }
+    &__wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 733px auto;
+        gap: 34px;
+    }
+    &__img {
+        margin-top: -50px;
+    }
+}

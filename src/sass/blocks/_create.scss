@@ -1,0 +1,243 @@
+.create {
+    margin-top: 60px;
+    &__descr {
+        display: flex;
+    }
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 798px;
+    display: flex;
+    flex-direction: column;
+    &__label {
+        margin: 28px 0 12px 0;
+        font-size: 22px;
+        color: var(--grey_3);
+    }
+    .select {
+        position: relative;
+        z-index: 2;
+        &_hidden {
+            display: none;
+        }
+        &__styled {
+            display: inline-block;
+            appearance: none;
+            position: relative;
+            width: 100%;
+            height: 56px;
+            padding: 12px 48px 13px 24px;
+            border-radius: 10px;
+            border: 1px solid var(--blue_main);
+            background: var(--white);
+            color: var(--grey_dark);
+            font-size: 26px;
+            line-height: 28px;
+            font-weight: 400;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:after {
+                position: absolute;
+                content: '';
+                background: url('../icons/arrow_down.svg');
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+                width: 24px;
+                height: 24px;
+            }
+            &:hover {
+                background: var(--blue_light1);
+            }             
+            &:focus {
+                outline: none;
+            }
+            &.open {
+                border: 1px solid var(--blue_main);
+                background: var(--white);
+                color: var(--grey_dark);
+                &:hover {
+                    background: var(--blue_light1);
+                }
+            }
+        }
+        &__options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            color: var(--grey_dark);
+            max-height: 200px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 7px;
+                height: 7px;
+                background: var(--grey_light1);
+                border-radius: 4px;
+            }
+            &::-webkit-scrollbar-thumb {
+                height: 10px;
+                background: var(--grey_dark);
+                border-radius: 4px;
+                &:hover {
+                    background: var(--blue_light1);
+                }
+            }
+            &.active {
+                display: block;
+            }
+        }
+        &__item {
+            padding: 12px 48px 13px 24px;
+            font-size: 26px;
+            line-height: 28px;
+            cursor: pointer;
+            &:hover {
+                color: var(--blue_main);
+            }
+            &.active {
+                color: var(--blue_main);
+            }
+        }
+    }
+    &__input {
+        position: relative;
+        width: 100%;
+        height: 56px;
+        padding: 12px 24px 13px 24px;
+        border-radius: 10px;
+        border: 1px solid var(--blue_main);
+        background: var(--white);
+        color: var(--grey_dark);
+        font-size: 26px;
+        line-height: 28px;
+        font-weight: 400;
+        &::placeholder {
+            color: var(--grey_light2);
+        }
+        &:focus {
+            outline: none;
+        }
+        &-descr {
+            height: 346px;
+        }
+        &.error {
+            border-color: var(--red);
+        }
+    }
+    &__option {
+        display: grid;
+        grid-template: auto / 322px 259px;
+        grid-auto-rows: 40px;
+        justify-content: space-between;
+        align-items: end;
+    }
+    &__yourprice {
+        position: relative;
+        width: 100%;
+    }
+    &__cur {
+        position: absolute;
+        right: -93px;
+        bottom: 18px;
+    }
+    &__check {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 259px;
+        height: 26px;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+    }
+    .custom-checkbox+label {
+        display: inline-flex;
+        user-select: none;
+        pointer-events: none;
+        &.error {
+            &::before {
+                border-color: var(--red);
+            }
+        }
+    }
+    .custom-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid var(--blue_main);
+        border-radius: 3px;
+        margin-right: 12px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+    .custom-checkbox:checked+label::before {
+        border-color: var(--blue_main);
+        // background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2211%22%20viewBox%3D%220%200%2016%2011%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%204.11111L6.31034%209L15%201%22%20stroke%3D%22%230297D4%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+        background-image: url('../icons/check2.svg');
+    }
+    /* стили при наведении курсора на checkbox */
+    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+        border-color: var(--blue_light1);
+    }
+    /* стили для активного состояния чекбокса (при нажатии на него) */
+    .custom-checkbox:not(:disabled):active+label::before {
+        background-color: var(--blue_main);
+        border-color: var(--blue_main);
+    }
+    /* стили для чекбокса, находящегося в фокусе */
+    .custom-checkbox:focus+label::before {
+        box-shadow: 0 0 0 0.2px var(--blue_2);
+    }
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    .custom-checkbox:focus:not(:checked)+label::before {
+        border-color: var(--blue_light1);
+    }
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox:disabled+label::before {
+        background-color: var(--grey_light2);
+    }
+    &__terms {
+        margin: 30px 0 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 12px;
+        position: relative;
+    }
+    &__button {
+        margin: 0 auto 80px auto;
+    }
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 53px 0 25px 0;
+    &:before, &:after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid var(--blue_main);
+    }
+    &__text {
+        padding: 0 20px;
+        background: white;
+        font-size: 26px;
+        text-transform: uppercase;
+    }
+}

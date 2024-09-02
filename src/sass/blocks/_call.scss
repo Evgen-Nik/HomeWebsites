@@ -1,0 +1,15 @@
+.call {
+    margin: 98px 0 69px 0;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        gap: 39px;
+    }
+    &__image {
+        margin-right: -14px;
+        height: 611px;
+    }
+    &__text {
+        margin-top: 40px;
+    }
+}

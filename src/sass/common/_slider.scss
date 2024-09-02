@@ -1,0 +1,91 @@
+.slider {
+    margin-top: 32px;
+    position: relative;
+    &__window {
+        width: 100%;
+        overflow: hidden;
+        position: relative; 
+    }
+    &__inner {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    &__slide {
+        width: 684px;
+        height: 682px;
+        padding: 4px;
+        &:nth-child(odd) {
+            margin-right: 16px;
+        }
+        &:nth-child(even) {
+            margin-left: 16px;
+        }
+    }
+    &__item {
+        height: 100%;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px var(--grey_light2);
+    }
+    &__counter {
+        position: absolute;
+        bottom: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        min-width: 32px;
+    }
+    &__prev, &__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: 1px solid var(--blue_main);
+        border-radius: 6px;
+        color: var(--blue_main);
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        &:hover {
+            background: var(--blue_light1);
+        }
+        &:focus {
+            background: none;    
+        }
+        &:disabled {
+            cursor: not-allowed;
+            border: 1px solid var(--grey_light2);
+            &:hover {
+                background: none;
+            }
+        }
+    }
+    &__prev {
+        left: -84px;
+    }
+    &__next {
+        right: -84px;
+    }
+    &__indicators {
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+    }
+    &__dot {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
+        border-radius: 100%;
+        cursor: pointer;
+        background-color: var(--grey_light2);
+        background-clip: padding-box;
+        transition: all .6s ease;
+    }
+}

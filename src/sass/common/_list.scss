@@ -1,0 +1,24 @@
+.list {
+    &__item {
+        padding: 32px 0 0 48px;
+        position: relative;
+    }
+    &__icon {
+        position: absolute;
+        left: 0;
+    }
+    &__num {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        border: 3px solid var(--blue_main);
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--blue_main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

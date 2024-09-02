@@ -1,0 +1,28 @@
+.info {
+    background: var(--yellow_light);
+    &__wrapper {
+        width: 100%;
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(2, 1fr);
+    }
+    &__img {
+        &_1 {
+            margin-right: -260px;
+        }
+        &_2 {
+            margin-left: -260px;
+        }
+    }
+    &__descr {
+        margin: 80px 0 60px 0;
+        &:first-child {
+            margin-right: 56px;
+        }
+        &:last-child {
+            margin-left: 56px;
+        }
+    }
+    &__text {
+        padding-top: 32px;
+    }
+}

@@ -1,0 +1,20 @@
+.banner {
+    background: url('../images/banner.jpg');
+    background-repeat: repeat-x;
+    background-position: center center;
+    height: 142px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__evacuator_yellow {
+        width: 210px;
+    }
+    &__button {
+        margin-left: 49px;
+    }
+}
